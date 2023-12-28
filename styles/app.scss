@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	font-family: "Figtree", sans-serif;
+}
+.list {
+	display: flex;
+	align-items: center;
+	gap: .2rem;
+}
+.tab-focus {
+	outline: none;
+	&:focus {
+		box-shadow: 0 0 2px 4px rgba(80,184,213,0.75);
+		-webkit-box-shadow: 0 0 2px 4px rgba(80,184,213,0.75);
+		-moz-box-shadow: 0 0 2px 4px rgba(80,184,213,0.75);
+	}
+}
+.v-btn {
+	&__content {
+		text-transform: capitalize;
+		letter-spacing: normal;
+	}
+}
+.gap-1 {
+	gap: 1rem;
+}
+.gap-point5 {
+	gap: .5rem;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.fill-height {
+	height: 100%;
+}
+.no-ellipsis {
+	white-space: normal !important;
+	overflow: visible !important;
+	text-overflow: unset !important;
+	-webkit-line-clamp: none !important;
+}
+
+// variables
+:root {
+	--color-text-secondary: #8e8e8e;
+}
