@@ -1,3 +1,3 @@
- <template>
-	 Saved Searches
- </template>
+<template>
+	Saved Searches
+</template>

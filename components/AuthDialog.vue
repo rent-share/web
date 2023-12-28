@@ -1,16 +1,19 @@
 <template>
-	<v-dialog :max-width="dialogMaxWidth"
+	<v-dialog
+		:max-width="dialogMaxWidth"
 		v-bind="$attrs" class="auth-dialog"
 	>
 		<v-card>
 			<div class="auth-dialog--title">
-				<div>{{dialogTitle}}</div>
-				<v-btn icon size="small"
-					@click="$emit('close')" variant="tonal"
+				<div>{{ dialogTitle }}</div>
+				<v-btn
+					icon size="small"
+					variant="tonal" @click="$emit('close')"
 				>
 					<v-icon>mdi-close</v-icon>
 				</v-btn>
 			</div>
+			<!-- eslint-disable-next-line -->
 			<div class="auth-dialog--subtitle" v-html="dialogSubtitle" />
 			<v-card-text>
 				<v-form>
@@ -23,7 +26,7 @@
 						:hide-details="hideDetails"
 						placeholder="Select an account type"
 					/>
-					<div class="list" v-if="forRegister">
+					<div v-if="forRegister" class="list">
 						<v-text-field
 							v-model="payload.first_name"
 							label="First Name*" :density="density"
@@ -91,7 +94,7 @@
 					/>
 				</v-form>
 			</v-card-text>
-			<div class="auth-dialog--info" v-if="forRegister">
+			<div v-if="forRegister" class="auth-dialog--info">
 				By creating an account, I accept RentShare's
 				<AppLink title="Terms and Conditions" href="/terms-and-conditions" />,
 				<AppLink title="Privacy Policy" href="/privacy-policy" />,
@@ -137,6 +140,8 @@ const props = defineProps<{
 	forRegister: boolean;
 	forForgotPassword: boolean;
 }>()
+
+defineEmits(["close", "signup", "login", "forgot-password"])
 
 const dialogTitle = computed(() => {
 	if (props.forLogin) return "Log Into RentShare"

@@ -2,7 +2,7 @@
 	<div class="ad-form">
 		<div class="ad-form--headline">
 			<h1>Create a new advertisement</h1>
-			<v-divider class="mb-4"/>
+			<v-divider class="mb-4" />
 		</div>
 		<div class="ad-form--container">
 			<div class="ad-form--form">
@@ -115,7 +115,9 @@
 					/>
 				</div>
 
-				<h2 id="owner-information">Owner Information</h2>
+				<h2 id="owner-information">
+					Owner Information
+				</h2>
 				<v-checkbox
 					v-model="payload.my_own_asset" density="compact"
 					hide-details="auto"
@@ -137,7 +139,9 @@
 					label="Contact Number" placeholder="Enter contact number of the owner"
 				/>
 
-				<h2 id="location-information">Location Information</h2>
+				<h2 id="location-information">
+					Location Information
+				</h2>
 				<v-text-field
 					v-model="payload.address" density="compact"
 					hide-details="auto"
@@ -192,18 +196,25 @@
 						Click on the map to select the location (lat/lang) of the property.
 						As you click on the map, the lat/lang will be automatically updated.
 
-						Or, you can always go the the <a href="maps.google.com" target="_blank" title="Google Maps">Google Maps</a>
+						Or, you can always go the the <a
+							href="maps.google.com" target="_blank"
+							title="Google Maps"
+						>Google Maps</a>
 						and find the lat/lang of the property.
-						Here is a <a href="https://www.youtube.com/watch?v=vkrg4rqKfVU&ab_channel=TechRelatedTips" title="video"
-												target="_blank">video</a> to help you find the lat/lang of the location on Google Maps.
+						Here is a <a
+							href="https://www.youtube.com/watch?v=vkrg4rqKfVU&ab_channel=TechRelatedTips" title="video"
+							target="_blank"
+						>video</a> to help you find the lat/lang of the location on Google Maps.
 					</p>
 					<v-card height="300">
-						<div id="ad-form--map"></div>
+						<div id="ad-form--map" />
 					</v-card>
 				</ClientOnly>
 
 
-				<h2 id="amenities">Amenities</h2>
+				<h2 id="amenities">
+					Amenities
+				</h2>
 				<h3>Internal Amenities</h3>
 
 				<div class="list">
@@ -283,7 +294,9 @@
 					prepend-inner-icon="mdi-car"
 				/>
 
-				<h2 id="bathroom">Bathroom</h2>
+				<h2 id="bathroom">
+					Bathroom
+				</h2>
 
 				<v-select
 					v-model="payload.bathroom_type" density="compact"
@@ -311,7 +324,9 @@
 					/>
 				</div>
 
-				<h2 id="accessibility">Accessibility</h2>
+				<h2 id="accessibility">
+					Accessibility
+				</h2>
 				<div class="list">
 					<v-checkbox
 						v-model="payload.wheelchair_accessible" density="compact"
@@ -326,7 +341,9 @@
 					/>
 				</div>
 
-				<h2 id="restrictions">Restrictions</h2>
+				<h2 id="restrictions">
+					Restrictions
+				</h2>
 
 				<div class="list">
 					<v-checkbox
@@ -365,7 +382,9 @@
 					placeholder="Enter the minimum number of age of the tenant you want in your property"
 				/>
 
-				<h2 id="security">Security</h2>
+				<h2 id="security">
+					Security
+				</h2>
 				<div class="list">
 					<v-checkbox
 						v-model="payload.security_guard" density="compact"
@@ -396,7 +415,9 @@
 					placeholder="Enter the insurance details of the property"
 				/>
 
-				<h2 id="neighborhood">Neighborhood</h2>
+				<h2 id="neighborhood">
+					Neighborhood
+				</h2>
 				<v-text-field
 					v-model="payload.proximity_to_public_transport" density="compact"
 					hide-details="auto" prepend-inner-icon="mdi-bus-clock"
@@ -427,20 +448,69 @@
 				<div class="ad-form--nav--container">
 					<v-card>
 						<v-card-text>
-							<v-chip label size="large" @click="scrollTo">Basic Information</v-chip>
-							<v-chip label size="large" @click="scrollTo">Owner Information</v-chip>
-							<v-chip label size="large" @click="scrollTo">Location Information</v-chip>
-							<v-chip label size="large" @click="scrollTo">Amenities</v-chip>
-							<v-chip label size="large" @click="scrollTo">Bathroom</v-chip>
-							<v-chip label size="large" @click="scrollTo">Accessibility</v-chip>
-							<v-chip label size="large" @click="scrollTo">Restrictions</v-chip>
-							<v-chip label size="large" @click="scrollTo">Security</v-chip>
-							<v-chip label size="large" @click="scrollTo">Neighborhood</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Basic Information
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Owner Information
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Location Information
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Amenities
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Bathroom
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Accessibility
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Restrictions
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Security
+							</v-chip>
+							<v-chip
+								label size="large"
+								@click="scrollTo"
+							>
+								Neighborhood
+							</v-chip>
 						</v-card-text>
 					</v-card>
 					<div class="ad-form--actions">
-						<v-btn color="error" large>Reset</v-btn>
-						<v-btn color="primary" large>Submit</v-btn>
+						<v-btn color="error" large>
+							Reset
+						</v-btn>
+						<v-btn color="primary" large>
+							Submit
+						</v-btn>
 					</div>
 				</div>
 			</div>
@@ -448,12 +518,16 @@
 		<div class="ad-form--footnote">
 			<p>
 				By clicking on the "Submit" button, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy
-				Policy</a>.
+					Policy</a>.
 			</p>
 		</div>
 		<div class="ad-form--actions main-actions">
-			<v-btn color="error" large>Reset</v-btn>
-			<v-btn color="primary" large>Submit</v-btn>
+			<v-btn color="error" large>
+				Reset
+			</v-btn>
+			<v-btn color="primary" large>
+				Submit
+			</v-btn>
 		</div>
 	</div>
 </template>
@@ -546,18 +620,18 @@ onMounted(async () => {
 		name: tile.name,
 		subdomains: tile.subDomains
 	}).addTo(map)
-	map.on('click', function (e) {
-		payload.value.latitude = e.latlng.lat;
-		payload.value.longitude = e.latlng.lng;
+	map.on("click", function (e) {
+		payload.value.latitude = e.latlng.lat
+		payload.value.longitude = e.latlng.lng
 		map.eachLayer(function (layer) {
 			if (
-				layer._icon && layer._icon.classList.contains('leaflet-marker-icon')
+				layer._icon && layer._icon.classList.contains("leaflet-marker-icon")
 			) {
-				map.removeLayer(layer);
+				map.removeLayer(layer)
 			}
-		});
-		L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
-	});
+		})
+		L.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
+	})
 
 	// add a scroll event listener,
 	// when ".main-actions" is visible, hide ".ad-form--nav--container .ad-form--actions"

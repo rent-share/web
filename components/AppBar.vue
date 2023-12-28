@@ -55,9 +55,15 @@
 						Rent
 					</v-list-item>
 					<v-divider class="py-1" />
-					<v-list-item to="/profile">Profile</v-list-item>
-					<v-list-item @click="toggleLoginDialog()">Log in</v-list-item>
-					<v-list-item @click="toggleSignUpDialog()">Sign up</v-list-item>
+					<v-list-item to="/profile">
+						Profile
+					</v-list-item>
+					<v-list-item @click="toggleLoginDialog()">
+						Log in
+					</v-list-item>
+					<v-list-item @click="toggleSignUpDialog()">
+						Sign up
+					</v-list-item>
 					<v-list-item>Logout</v-list-item>
 				</v-list>
 			</v-menu>
@@ -79,24 +85,24 @@ const route = useRoute()
 
 const authDialog = reactive<{
 	show: boolean;
-	mode: 'login' | 'register' | 'forgot-password' | null;
+	mode: "login" | "register" | "forgot-password" | null;
 }>({
 	show: false,
 	mode: null
 })
 
 const toggleLoginDialog = () => {
-	authDialog.mode = 'login'
+	authDialog.mode = "login"
 	authDialog.show = true
 }
 
 const toggleSignUpDialog = () => {
-	authDialog.mode = 'register'
+	authDialog.mode = "register"
 	authDialog.show = true
 }
 
 const toggleForgotPasswordDialog = () => {
-	authDialog.mode = 'forgot-password'
+	authDialog.mode = "forgot-password"
 	authDialog.show = true
 }
 </script>
