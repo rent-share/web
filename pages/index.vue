@@ -27,6 +27,9 @@
 					</v-card-text>
 				</v-card>
 			</div>
+			<div class="index-img__content__copyright">
+				Photo courtesy of <a href="https://zumper.com" title="Zumper">Zumper.com</a>.
+			</div>
 		</div>
 	</v-img>
 	<div class="index__info">
@@ -64,32 +67,12 @@
 				<h1>Choose a popular city</h1>
 
 				<v-chip-group>
-					<v-chip size="large">
-						Kathmandu
-					</v-chip>
-					<v-chip size="large">
-						Pokhara
-					</v-chip>
-					<v-chip size="large">
-						Chitwan
-					</v-chip>
-					<v-chip size="large">
-						Biratnagar
-					</v-chip>
-					<v-chip size="large">
-						Birgunj
-					</v-chip>
-					<v-chip size="large">
-						Butwal
-					</v-chip>
-					<v-chip size="large">
-						Dharan
-					</v-chip>
-					<v-chip size="large">
-						Bhaktapur
-					</v-chip>
-					<v-chip size="large">
-						Lalitpur
+					<v-chip
+						v-for="district in districtList"
+						:key="district"
+						size="large" clas="city-chip"
+					>
+						{{ district }}
 					</v-chip>
 				</v-chip-group>
 			</v-img>
@@ -347,6 +330,18 @@ useSeoMeta({
 })
 
 const search = ref("")
+
+const districtList = [
+	"Kathmandu",
+	"Pokhara",
+	"Chitwan",
+	"Biratnagar",
+	"Birgunj",
+	"Butwal",
+	"Dharan",
+	"Bhaktapur",
+	"Lalitpur",
+]
 </script>
 <style lang="scss" scoped>
 @import "styles/index";

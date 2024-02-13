@@ -33,6 +33,11 @@
 			max-width: 600px;
 			margin-inline: auto;
 		}
+		&__copyright {
+			position: absolute;
+			bottom: 1rem;
+			right: 1rem;
+		}
 	}
 }
 .index {
@@ -55,9 +60,18 @@
 		padding: 8rem 1rem 1rem clamp(3rem, 8vw, 10rem);
 	}
 	&__right {
+		h1 {
+			font-weight: normal;
+			text-decoration: underline;
+		}
 		.v-img {
 			padding: 4rem 1rem 1rem;
 			color: white;
+		}
+		.v-chip.v-chip--size-large {
+			font-size: 1.6rem;
+			font-weight: bold;
+			padding: 1.6rem 1rem;
 		}
 	}
 }

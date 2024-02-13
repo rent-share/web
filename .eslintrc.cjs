@@ -27,10 +27,10 @@ module.exports = {
 		"vue/html-indent": ["error", "tab"],
 		"vue/max-attributes-per-line": ["error", {
 			"singleline": {
-				"max": 2
+				"max": 3
 			},
 			"multiline": {
-				"max": 2
+				"max": 3
 			}
 		}],
 		"vue/no-multiple-template-root": "off",
