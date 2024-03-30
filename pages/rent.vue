@@ -333,6 +333,9 @@
 	</div>
 </template>
 <script setup lang="ts">
+useSeoMeta({
+	title: "Rooms for Rent"
+})
 </script>
 <style lang="scss">
 .rent {

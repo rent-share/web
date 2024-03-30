@@ -21,7 +21,7 @@
 						v-if="forRegister"
 						v-model="payload.account_type"
 						label="Account Type*"
-						:density="density" :items="AccountTypePublicChoices"
+						:density="density" :items="AccountTypeChoices"
 						prepend-inner-icon="mdi-target-account"
 						:hide-details="hideDetails"
 						placeholder="Select an account type"
@@ -74,14 +74,6 @@
 						label="Address*"
 						:density="density"
 						prepend-inner-icon="mdi-map-marker"
-						:hide-details="hideDetails"
-					/>
-					<v-select
-						v-if="props.forRegister"
-						v-model="payload.city"
-						label="City*"
-						:density="density" :items="[]"
-						prepend-inner-icon="mdi-city"
 						:hide-details="hideDetails"
 					/>
 					<v-text-field

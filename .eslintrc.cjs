@@ -2,7 +2,6 @@ module.exports = {
 	root: true,
 	extends: [
 		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended',
 		"@nuxt/eslint-config"
 	],
@@ -10,7 +9,6 @@ module.exports = {
 	parserOptions: {
 		parser: '@typescript-eslint/parser'
 	},
-	plugins: ['@typescript-eslint'],
 	ignorePatterns: [
 		'node_modules/',
 		'build/',
@@ -34,5 +32,6 @@ module.exports = {
 			}
 		}],
 		"vue/no-multiple-template-root": "off",
+		"vue/valid-v-slot": "off"
 	}
 }

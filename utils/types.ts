@@ -7,7 +7,6 @@ export interface AuthPayload {
 	last_name?: string;
 	primary_contact?: string;
 	address?: string;
-	city?: string;
 	account_type?: number;
 	citizenship_number?: string;
 	citizenship_back?: File;
@@ -109,4 +108,32 @@ export interface IPropertyNeighborhoodInformation {
 
 export interface IPropertyMediaInformation {
 	filesForUpload: File[]
+}
+
+export interface Profile {
+	id: number;
+	middle_name: string|null;
+	primary_contact: string;
+	secondary_contact: string|null;
+	address: string;
+	account_type: number;
+	citizenship_number: string|null;
+	citizenship_back: string|null;
+	is_citizenship_verified: boolean;
+	is_contact_verified: boolean;
+	is_email_verified: boolean;
+}
+
+export interface User {
+	id: number;
+	username: string;
+	email: string;
+	last_login: string;
+	is_superuser: boolean;
+	first_name: string;
+	last_name: string;
+	is_staff: boolean;
+	is_active: boolean;
+	date_joined: string;
+	profile: Profile;
 }

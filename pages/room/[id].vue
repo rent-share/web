@@ -325,19 +325,17 @@
 			</v-list>
 
 			<h2>Rules and Policies</h2>
-			<v-list>
-				<v-list-item
-					v-for="rule in room.rules" :key="rule.title"
-					prepend-icon="mdi-circle-medium"
+			<ol>
+				<li
+					v-for="rule in room.rules"
+					:key="rule.title" tag="li"
 				>
-					<v-list-item-content>
-						<v-list-item-title>{{ rule.title }}</v-list-item-title>
-						<v-list-item-subtitle>{{ rule.content }}</v-list-item-subtitle>
-					</v-list-item-content>
-				</v-list-item>
-			</v-list>
+					<v-list-item-title>{{ rule.title }}</v-list-item-title>
+					<v-list-item-subtitle>{{ rule.content }}</v-list-item-subtitle>
+				</li>
+			</ol>
 			<h2>Restrictions</h2>
-			<v-chip-group>
+			<div class="list">
 				<v-chip
 					label size="small"
 					:disabled="!room.restrictions.no_smoking"
@@ -371,39 +369,37 @@
 				<v-chip label size="small">
 					Age Restriction: {{ room.restrictions.age_restriction }}+
 				</v-chip>
-			</v-chip-group>
+			</div>
 		</div>
 		<div class="room--neighborhood">
 			<h2>Neighborhood</h2>
-			<v-list class="room--neighborhood--list">
-				<v-list-item prepend-icon="mdi-eye">
-					<v-list-item-title>View from Accommodation</v-list-item-title>
-					<v-list-item-subtitle>{{ room.neighborhood.view_from_accommodation }}</v-list-item-subtitle>
-				</v-list-item>
-				<v-list-item prepend-icon="mdi-map-marker-distance">
-					<v-list-item-title>Nearby Points of Interest</v-list-item-title>
-					<v-list-item-subtitle class="no-ellipsis">
-						<v-list density="compact">
-							<v-list-item
-								v-for="point in room.neighborhood.nearby_points_of_interest"
-								:key="point" prepend-icon="mdi-circle-medium"
-							>
-								<v-list-item-title class="no-ellipsis">
-									{{ point }}
-								</v-list-item-title>
-							</v-list-item>
-						</v-list>
-					</v-list-item-subtitle>
-				</v-list-item>
-				<v-list-item prepend-icon="mdi-bus">
-					<v-list-item-title>Proximity to Public Transport</v-list-item-title>
-					<v-list-item-subtitle>{{ room.neighborhood.proximity_to_public_transport }}</v-list-item-subtitle>
-				</v-list-item>
-				<v-list-item prepend-icon="mdi-volume-high">
-					<v-list-item-title>Noise Level</v-list-item-title>
-					<v-list-item-subtitle>{{ room.neighborhood.noise_level }}</v-list-item-subtitle>
-				</v-list-item>
-			</v-list>
+			<ul class="room--neighborhood--list">
+				<li>
+					<v-list-item-title><v-icon>mdi-eye</v-icon>View from Accommodation</v-list-item-title>
+					<p>{{ room.neighborhood.view_from_accommodation }}</p>
+				</li>
+				<li>
+					<v-list-item-title><v-icon>mdi-map-marker-distance</v-icon>Nearby Points of Interest</v-list-item-title>
+					<ol>
+						<li
+							v-for="point in room.neighborhood.nearby_points_of_interest"
+							:key="point"
+						>
+							<p>
+								{{ point }}
+							</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<v-list-item-title><v-icon>mdi-bus</v-icon>Proximity to Public Transport</v-list-item-title>
+					<p>{{ room.neighborhood.proximity_to_public_transport }}</p>
+				</li>
+				<li>
+					<v-list-item-title><v-icon>mdi-volume-high</v-icon>Noise Level</v-list-item-title>
+					<p>{{ room.neighborhood.noise_level }}</p>
+				</li>
+			</ul>
 		</div>
 		<div class="room--reviews">
 			<h2>Reviews</h2>
@@ -625,6 +621,10 @@ const room = {
 		noise_level: "Low",
 	}
 }
+
+useSeoMeta({
+	title: room.name
+})
 </script>
 <style lang="scss">
 @import "styles/room.scss";

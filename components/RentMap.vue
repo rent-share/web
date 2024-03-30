@@ -3,9 +3,10 @@
 </template>
 <script setup lang="ts">
 import "leaflet/dist/leaflet.css"
+
 const zoom = ref(12)
 const center = ref([27.700769, 85.300140])
-const map = ref<LMap | null>(null)
+const map = ref<Map | null>(null)
 const tile = {
 	url: "https://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
 	attribution: "Google",
@@ -25,3 +26,4 @@ onMounted(async () => {
 	}).addTo(map.value)
 })
 </script>
+03-06-01423130

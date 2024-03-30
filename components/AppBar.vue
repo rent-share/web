@@ -2,7 +2,8 @@
 	<v-toolbar
 		class="navbar"
 		:class="{
-			'navbar__sticky navbar__shrink': route.name === 'rent'
+			'navbar__sticky navbar__shrink': stickyNavRoutes.includes(route.name),
+			'elevation-2': elevatedNavRoutes.includes(route.name)
 		}"
 	>
 		<div class="navbar__brand list">
@@ -47,15 +48,19 @@
 				>
 					<v-list-item>Favorites</v-list-item>
 					<v-list-item>Applications</v-list-item>
-					<v-list-item>Rentals</v-list-item>
+					<v-list-item to="/rent">
+						Rentals
+					</v-list-item>
 					<v-list-item>Saved searches</v-list-item>
 					<v-divider class="py-1" />
-					<v-list-item>Advertise</v-list-item>
+					<v-list-item to="/advertise">
+						Advertise
+					</v-list-item>
 					<v-list-item href="/rent">
 						Rent
 					</v-list-item>
 					<v-divider class="py-1" />
-					<v-list-item to="/profile">
+					<v-list-item to="/profile/about">
 						Profile
 					</v-list-item>
 					<v-list-item @click="toggleLoginDialog()">
@@ -65,6 +70,10 @@
 						Sign up
 					</v-list-item>
 					<v-list-item>Logout</v-list-item>
+					<v-divider />
+					<v-list-item to="/settings/dashboard">
+						Settings
+					</v-list-item>
 				</v-list>
 			</v-menu>
 		</div>
@@ -82,7 +91,8 @@
 </template>
 <script setup lang="ts">
 const route = useRoute()
-
+const stickyNavRoutes = ["rent", "profile-about", "profile-change-password", "profile-listings", "profile-applications"]
+const elevatedNavRoutes = ["profile-about", "profile-change-password", "profile-listings", "profile-applications"]
 const authDialog = reactive<{
 	show: boolean;
 	mode: "login" | "register" | "forgot-password" | null;
@@ -109,11 +119,13 @@ const toggleForgotPasswordDialog = () => {
 <style lang="scss">
 .navbar {
 	padding-inline: 1rem;
-	background: aliceblue !important;
+	background: aliceblue;
 	&__sticky {
-		position: sticky;
+		background: #e4f4ff !important;
+		position: sticky !important;
 		top: 0;
-		z-index: 1;
+		z-index: 2;
+		border-bottom: 1px solid #d3edff;
 	}
 	&__shrink {
 		.v-toolbar__content {

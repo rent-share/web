@@ -5,6 +5,9 @@
 		lazy-src="/homepage-desktop-lazy.png"
 		:cover="true" :eager="true"
 	>
+		<div class="index-img__credit">
+			Image Source: <a href="https://www.zumper.com/" title="Zumper">Zumper</a>
+		</div>
 		<div class="index-img__content">
 			<div class="index-img__content__heading">
 				Pursue the eternal<br>
@@ -26,9 +29,6 @@
 						/>
 					</v-card-text>
 				</v-card>
-			</div>
-			<div class="index-img__content__copyright">
-				Photo courtesy of <a href="https://zumper.com" title="Zumper">Zumper.com</a>.
 			</div>
 		</div>
 	</v-img>

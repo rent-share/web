@@ -105,7 +105,7 @@
 					<v-toolbar>
 						<v-toolbar-title>More filters</v-toolbar-title>
 						<v-spacer />
-						<v-btn text>
+						<v-btn variant="text">
 							Close
 						</v-btn>
 					</v-toolbar>
@@ -136,7 +136,7 @@
 				Save Search
 			</v-btn>
 		</div>
-		<v-divider class="mt-3" />
+		<v-divider class="mt-2" />
 	</div>
 </template>
 <script setup lang="ts">
@@ -146,10 +146,10 @@ const price = ref([0, 100000])
 <style lang="scss">
 .rent-filter {
 	position: sticky;
-	top: 64px;
+	top: 65px;
 	z-index: 3;
 	background: aliceblue;
-	padding-bottom: 1rem;
+	padding-block: .5rem;
 
 	.v-btn {
 		width: auto;
@@ -189,12 +189,14 @@ const price = ref([0, 100000])
 		align-items: center;
 		flex-wrap: wrap;
 	}
+
 	&__input {
 		display: flex;
 		gap: .75rem;
 		align-items: center;
-		margin-bottom: .75rem;
+		margin-bottom: .5rem;
 	}
+
 	&__address {
 	}
 }
