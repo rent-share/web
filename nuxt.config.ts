@@ -6,19 +6,20 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
+			titleTemplate: "%s | RentShare",
 			charset: "utf-8",
 			viewport: "width=device-width, initial-scale=1",
-		}
+		},
+		pageTransition: { name: "page", mode: "out-in" },
+	},
+	routeRules: {
+		"/profile/**": { ssr: false },
+		"/settings/**": { ssr: false }
 	},
 	devtools: {enabled: true},
 	modules: [
-		"@pinia/nuxt",
-		"@nuxtjs/google-fonts", // https://google-fonts.nuxtjs.org/
-		"nuxt3-leaflet",
+		"@nuxtjs/google-fonts",
 	],
-	pinia: {
-		storesDirs: ["./stores/**"],
-	},
 	googleFonts: {
 		families: {
 			Figtree: [300, 400, 500, 600, 700, 800, 900],

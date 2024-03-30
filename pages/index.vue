@@ -1,18 +1,20 @@
 <template>
-	<HomepageIndexBanner />
-	<HomepageIndexInfo />
-	<HomepageIndexShowcaseImg />
-	<HomepageIndexCities />
-	<HomepageIndexAbout />
-	<HomepageIndexServices />
-	<HomepageIndexValues />
-	<HomepageIndexNewsRoom />
-	<HomepageIndexSearch />
-	<HomepageIndexExplore />
+	<div class="homepage">
+		<HomepageIndexBanner />
+		<HomepageIndexInfo />
+		<HomepageIndexShowcaseImg />
+		<HomepageIndexCities />
+		<HomepageIndexAbout />
+		<HomepageIndexServices />
+		<HomepageIndexValues />
+		<HomepageIndexNewsRoom />
+		<HomepageIndexSearch />
+		<HomepageIndexExplore />
+	</div>
 </template>
 <script setup lang="ts">
 useSeoMeta({
-	title: "Home | RentShare",
+	title: "Home",
 	ogTitle: "Home | RentShare",
 	description: "A rental platform for accommodation seekers and landlords",
 	ogDescription: "A rental platform for accommodation seekers and landlords",

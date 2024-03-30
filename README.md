@@ -1,2 +1,3 @@
-# RentShare Web
-This is the web application for RentShare. It is built using Vue3 and Nuxt.
+## RentShare Web
+
+This is a web service for RentShare platform built using Nuxt, Vue and Vuetify

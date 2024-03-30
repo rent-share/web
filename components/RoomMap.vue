@@ -10,7 +10,7 @@ const props = defineProps<{
 	zoom: number;
 }>()
 
-const map = ref<LMap | null>(null)
+const map = ref(null)
 const tile = {
 	url: "https://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
 	attribution: "Google",

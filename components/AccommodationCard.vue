@@ -1,5 +1,5 @@
 <template>
-	<v-card class="accommodation-card">
+	<div class="accommodation-card">
 		<v-btn
 			class="accommodation-card__bookmark"
 			size="x-small" icon
@@ -55,7 +55,7 @@
 			Rs. <span>{{ accommodation.price }}</span> / month
 		</div>
 		<v-divider class="mx-3" />
-		<v-card-actions>
+		<div class="accommodation-card--actions">
 			<v-btn
 				variant="tonal" prepend-icon="mdi-eye"
 				rounded="lg" color="orange"
@@ -69,8 +69,8 @@
 			>
 				Book
 			</v-btn>
-		</v-card-actions>
-	</v-card>
+		</div>
+	</div>
 </template>
 <script setup lang="ts">
 type Accommodation = {
@@ -146,6 +146,9 @@ const accommodation:Accommodation = {
 <style lang="scss">
 .accommodation-card {
 	position: relative;
+	border-radius: 8px;
+	border: 1px solid #c0c0c0;
+	overflow: hidden;
 
 	&__info {
 		padding-inline: 1rem;
@@ -201,6 +204,7 @@ const accommodation:Accommodation = {
 			font-weight: 600;
 		}
 	}
+
 	&__details {
 		display: flex;
 		align-items: center;
@@ -234,8 +238,19 @@ const accommodation:Accommodation = {
 			border-radius: 8px;
 		}
 	}
+
+	&--actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: .5rem 1rem;
+		gap: .5rem;
+	}
 }
 .accommodation-card:hover {
+	box-shadow: 0 3px 1px -2px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+		0px 2px 2px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
+		0px 1px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12)) !important;
 	.accommodation-card__timestamp {
 		scale: 1;
 	}

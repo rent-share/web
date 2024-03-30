@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="default-layout">
 		<AppBar />
 		<div class="app-container">
 			<slot />

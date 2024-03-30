@@ -10,7 +10,7 @@
 		<v-card-title>{{ blog.title }}</v-card-title>
 		<v-card-text>{{ blog.content.substring(0, 100) }}</v-card-text>
 		<v-card-actions>
-			<v-btn text>
+			<v-btn variant="text">
 				Read More
 			</v-btn>
 		</v-card-actions>
