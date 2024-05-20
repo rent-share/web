@@ -1,7 +1,7 @@
 <template>
-	<HomepageIndexImage />
+	<HomepageIndexBanner />
 	<HomepageIndexInfo />
-	<HomepageIndexImageTwo />
+	<HomepageIndexShowcaseImg />
 	<HomepageIndexCities />
 	<HomepageIndexAbout />
 	<HomepageIndexServices />
