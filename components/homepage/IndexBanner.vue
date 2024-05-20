@@ -33,5 +33,6 @@
 		</div>
 	</v-img>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
+const search = ref("")
 </script>
