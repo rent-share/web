@@ -17,8 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
       - run: bun install --frozen-lockfile
       - run: bun lint
   build:
@@ -29,5 +27,5 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - run: bun install --frozen-lockfile
+      - run: bun i --frozen-lockfile
       - run: bun build
